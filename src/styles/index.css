@@ -1,0 +1,7 @@
+body {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #111;
+    background-image: url(../images/naht-blocks.png);
+}
