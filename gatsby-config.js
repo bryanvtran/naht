@@ -4,6 +4,7 @@ module.exports = {
     description: `DJ NAHT`,
     author: `Bryan Tran`,
   },
+  pathPrefix: "/naht",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
