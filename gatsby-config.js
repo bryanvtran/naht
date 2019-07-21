@@ -2,19 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `NAHT`,
     description: `DJ NAHT`,
-    author: `Bryan Tran`,
+    author: `www.bryanvtran.com`,
   },
   pathPrefix: "/naht",
   plugins: [
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -28,7 +21,14 @@ module.exports = {
         icon: `src/images/naht-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
