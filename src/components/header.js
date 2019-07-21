@@ -8,8 +8,16 @@ import InstagramIcon from './icons/instagram-icon';
 import SoundCloudIcon from './icons/soundcloud-icon';
 import YoutubeIcon from './icons/youtube-icon';
 
-const Social = styled.div`
+const navStyles = `
   display: inline-block;
+
+  @media (max-width: 480px) {
+    display: block;
+  }
+`;
+
+const SocialDiv = styled.div`
+  ${navStyles}
 `;
 
 const StyledHeader = styled.header`
@@ -17,8 +25,8 @@ const StyledHeader = styled.header`
   text-align: center;
 `;
 
-const Nav = styled.nav`
-  display: inline-block;
+const StyledNav = styled.nav`
+  ${navStyles}
 `;
 
 const NavList = styled.ul`
@@ -46,7 +54,7 @@ const NavLink = styled(Link)`
 
 const Header = () => (
   <StyledHeader>
-    <Nav>
+    <StyledNav>
       <NavList>
         <NavItem>
           <NavLink to="/">
@@ -69,8 +77,8 @@ const Header = () => (
           </NavLink>
         </NavItem>
       </NavList>
-    </Nav>
-    <Social>
+    </StyledNav>
+    <SocialDiv>
       <NavList>
         <NavItem social={true}>
           <NavLink to="/">
@@ -93,7 +101,7 @@ const Header = () => (
           </NavLink>
         </NavItem>
       </NavList>
-    </Social>
+    </SocialDiv>
   </StyledHeader>
 )
 
