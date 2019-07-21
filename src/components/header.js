@@ -2,6 +2,12 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import React from "react"
 
+// internal components
+import FacebookIcon from './icons/facebook-icon';
+import InstagramIcon from './icons/instagram-icon';
+import SoundCloudIcon from './icons/soundcloud-icon';
+import YoutubeIcon from './icons/youtube-icon';
+
 const Social = styled.div`
   display: inline-block;
 `;
@@ -23,7 +29,8 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   display: inline-block;
-  padding: 0 8px;
+  padding: ${props => props.social ? ' 0 6px' : '0 8px'};
+  
 `;
 
 const NavLink = styled(Link)`
@@ -31,8 +38,9 @@ const NavLink = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
 
-  &:hover, &:focus {
-    text-decoration: underline;
+  &:hover {
+    opacity: .75;
+    transition: 0.125s;
   }
 `;
 
@@ -64,19 +72,24 @@ const Header = () => (
     </Nav>
     <Social>
       <NavList>
-        <NavItem>
+        <NavItem social={true}>
           <NavLink to="/">
-            FB
+            <FacebookIcon />
           </NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem social={true}>
           <NavLink to="/">
-            IG
+            <InstagramIcon />
           </NavLink>
         </NavItem>
-        <NavItem>
+        <NavItem social={true}>
           <NavLink to="/">
-            YT
+            <YoutubeIcon />
+          </NavLink>
+        </NavItem>
+        <NavItem social={true}>
+          <NavLink to="/">
+            <SoundCloudIcon />
           </NavLink>
         </NavItem>
       </NavList>
