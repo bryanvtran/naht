@@ -76,6 +76,11 @@ const Header = () => (
             Contact
           </NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink to="/">
+            RSVP/Guestlist
+          </NavLink>
+        </NavItem>
       </NavList>
     </StyledNav>
     <SocialDiv>
