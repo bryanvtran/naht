@@ -4,7 +4,7 @@ module.exports = {
     description: `DJ NAHT`,
     author: `www.bryanvtran.com`,
   },
-  pathPrefix: "/naht",
+  pathPrefix: "",
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
