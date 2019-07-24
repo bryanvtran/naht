@@ -5,8 +5,18 @@ import styled from "@emotion/styled"
 // internal components
 import FacebookIcon from './icons/facebook-icon';
 import InstagramIcon from './icons/instagram-icon';
-import SoundCloudIcon from './icons/soundcloud-icon';
-import YoutubeIcon from './icons/youtube-icon';
+import TwitterIcon from './icons/twitter-icon';
+
+const linkStyles = `
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: .75;
+    transition: 0.125s;
+  }
+`;
 
 const navStyles = `
   display: inline-block;
@@ -18,6 +28,10 @@ const navStyles = `
 
 const SocialDiv = styled.div`
   ${navStyles}
+`;
+
+const SocialLink = styled.a`
+  ${linkStyles}
 `;
 
 const StyledHeader = styled.header`
@@ -38,18 +52,10 @@ const NavList = styled.ul`
 const NavItem = styled.li`
   display: inline-block;
   padding: ${props => props.social ? ' 0 6px' : '0 8px'};
-  
 `;
 
 const NavLink = styled(Link)`
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  &:hover {
-    opacity: .75;
-    transition: 0.125s;
-  }
+  ${linkStyles}
 `;
 
 const Header = () => (
@@ -86,24 +92,19 @@ const Header = () => (
     <SocialDiv>
       <NavList>
         <NavItem social={true}>
-          <NavLink to="/">
+          <SocialLink href="https://www.facebook.com/NAHTmusic" target="_blank">
             <FacebookIcon />
-          </NavLink>
+          </SocialLink>
         </NavItem>
         <NavItem social={true}>
-          <NavLink to="/">
+          <SocialLink href="https://www.instagram.com/nahtmusic/" target="_blank">
             <InstagramIcon />
-          </NavLink>
+          </SocialLink>
         </NavItem>
         <NavItem social={true}>
-          <NavLink to="/">
-            <YoutubeIcon />
-          </NavLink>
-        </NavItem>
-        <NavItem social={true}>
-          <NavLink to="/">
-            <SoundCloudIcon />
-          </NavLink>
+          <SocialLink href="https://twitter.com/NAHTmusic" target="_blank">
+            <TwitterIcon />
+          </SocialLink>
         </NavItem>
       </NavList>
     </SocialDiv>
