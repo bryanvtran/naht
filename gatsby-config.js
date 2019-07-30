@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-force-trailing-slashes`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     {

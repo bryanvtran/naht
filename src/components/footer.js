@@ -5,7 +5,11 @@ import styled from "@emotion/styled"
 import MailIcon from "./icons/mail-icon";
 
 const StyledFooter = styled.footer`
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 2rem 0;
+    position: fixed;
     text-align: center;
 `;
 

@@ -78,12 +78,12 @@ const Header = () => (
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/">
+          <NavLink to="/contact/">
             Contact
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/">
+          <NavLink to="/rsvp/">
             RSVP/Guestlist
           </NavLink>
         </NavItem>

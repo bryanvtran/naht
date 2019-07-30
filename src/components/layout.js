@@ -17,10 +17,7 @@ import Header from "./header"
 import Footer from "./footer"
 
 const FullContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  justify-content: space-between;
   min-height: 100%;
 
   ${props => props.background && `
@@ -35,7 +32,6 @@ const Main = styled.main`
   margin: 0 auto;
   max-width: 980px;
   padding: 0 16px;
-  width: 100%;
 `;
 
 const Layout = ({ background, children }) => {
