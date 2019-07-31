@@ -30,7 +30,7 @@ const SubmitButton = styled.input`
 class ContactPage extends React.Component {
     state = {
         name: "",
-        email: "",
+        _replyto: "",
         message: "",
     }
 
@@ -52,11 +52,12 @@ class ContactPage extends React.Component {
         return (
             <Layout>
                 <SEO title="Contact" />
-                <StyledForm onSubmit={this.handleSubmit}>
+                <StyledForm accept-charset="utf-8" action="https://formspree.io/david@nahtajoke.com" method="post">
                     <CenteredTitle>Contact Us</CenteredTitle>
                     <FormInput label="Full Name" name="name" onChange={this.handleInputChange} value={this.state.name} />
-                    <FormInput label="Email" name="email" onChange={this.handleInputChange} type="email" value={this.state.email} />
+                    <FormInput label="Email" name="_replyto" onChange={this.handleInputChange} type="email" value={this.state._replyto} />
                     <FormInput label="Message" name="message" onChange={this.handleInputChange} type="textarea" value={this.state.message} />
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission" />
                     <SubmitButton type="submit" value="Submit" />
                 </StyledForm>
             </Layout>
